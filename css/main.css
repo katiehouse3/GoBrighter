@@ -150,6 +150,7 @@ a:hover#menu-icon {
 
 .logo{
   vertical-align: middle;
+  max-width:500px;
 }
 
 #CoachingB{
