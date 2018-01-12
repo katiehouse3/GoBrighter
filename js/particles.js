@@ -14,15 +14,15 @@
 
         scene = new THREE.Scene();
 
-        scene.background = new THREE.Color( 0xFFFFFF );
+        scene.background = new THREE.Color( 0xC0C0C0 );
 
         var material = new THREE.SpriteMaterial( {
           map: new THREE.CanvasTexture( generateSprite() ),
-          blending: THREE.MultiplyBlending,
+          blending: THREE.AdditiveBlending,
           transparent: true
         } );
 
-        for ( var i = 0; i < 1000; i++ ) {
+        for ( var i = 0; i < 500; i++ ) {
           particle = new THREE.Sprite( material );
           initParticle( particle, i * 10 );
           scene.add( particle );
@@ -56,10 +56,10 @@
         canvas.height = 16;
         var context = canvas.getContext( '2d' );
         var gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
-        gradient.addColorStop( 0, 'rgba(255,255,255,1)' );
-        gradient.addColorStop( 0.2, 'rgba(255,255,153,1)' );
-        gradient.addColorStop( 0.4, 'rgba(255,255,204,1)' );
-        gradient.addColorStop( 1, 'rgba(255,255,255,1)' );
+        gradient.addColorStop( 0, 'white' );
+        gradient.addColorStop( 0.2, 'white' );
+        gradient.addColorStop( 0.4, 'Gainsboro' );
+        gradient.addColorStop( 1, 'Black' );
         context.fillStyle = gradient;
         context.fillRect( 0, 0, canvas.width, canvas.height );
         return canvas;
@@ -68,7 +68,7 @@
       function initParticle( particle, delay ) {
         var particle = this instanceof THREE.Sprite ? this : particle;
         var delay = delay !== undefined ? delay : 0;
-        particle.position.set( 0, 0, 0 );
+        particle.position.set( 0, 250, 0 );
         particle.scale.x = particle.scale.y = Math.random() * 32 + 16;
         new TWEEN.Tween( particle )
           .delay( delay )
