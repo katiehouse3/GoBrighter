@@ -1,16 +1,17 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['Home', 'Coaching', 'Teams', 'Workshops', 'Consulting','CLOGuide', 'About'],
+    anchors:['home1','coaching2', 'teambuilding3', 'survey4', 'workshop5','about6'],
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['Home', 'Coaching', 'Teams', 'Workshops', 'Consulting','CLO Guide', 'About'],
-    showActiveTooltip: false,
+    navigationTooltips: ['home','coaching', 'teambuilding', 'survey', 'workshop','about'],
+    showActiveTooltip: true,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
 
@@ -34,7 +35,7 @@ $(document).ready(function() {
     offsetSections: false,
     resetSliders: false,
     fadingEffect: false,
-    normalScrollElements: '#element1, .element2',
+    normalScrollElements: '#test, #teambuilding',
     scrollOverflow: false,
     scrollOverflowReset: true,
     scrollOverflowOptions: null,
@@ -52,10 +53,10 @@ $(document).ready(function() {
     verticalCentered: true,
     sectionsColor : [],
     paddingTop: 0,
-    paddingBottom: '10px',
+    paddingBottom: 0,
     fixedElements: '#header, .footer',
-    responsiveWidth: 0,
-    responsiveHeight: 600,
+    responsiveWidth: 400,
+    responsiveHeight: 0,
     responsiveSlides: false,
     parallax: false,
     parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
@@ -67,19 +68,33 @@ $(document).ready(function() {
     lazyLoading: true,
 
     //events
-    onLeave: function(index, nextIndex, direction){},
-    afterLoad: function(anchorLink, index){},
-    afterRender: function(){
-         $('#menu').hide();
-    },
-    afterLoad: function(anchor, index){
-        if(index == 1){
-             $('#menu').fadeOut(800);
-        }else{
-             $('#menu').fadeIn(800);   
+    onLeave: function(index, nextIndex, direction){
+        //after leaving section 2
+        if(index == 1 && direction =='down'){
+            $('#menu').fadeOut(800);
         }
-      },
-    afterResponsive: function(isResponsive){},
+
+        if(index == 2 && direction =='up'){
+            $('#menu').fadeOut(800);
+        }
+    },
+    afterLoad: function(anchorLink, index){
+        var loadedSection = $(this);
+        if(index == 1){
+            $('#menu-home').hide();
+            $('.menu-image').fadeIn();
+            $('#menu').css({top:300});
+            $('#menu').fadeIn(800);
+        }
+        if(index != 1){
+            $('#menu-home').show();
+            $('.menu-image').hide();
+            $('#menu').css({top:0});
+            $('#menu').fadeIn(800);
+        }
+    },
+    afterRender: function(){ },
+    afterResponsive: function(isResponsive){ },
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });

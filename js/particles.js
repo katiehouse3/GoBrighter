@@ -14,11 +14,9 @@
 
         scene = new THREE.Scene();
 
-        scene.background = new THREE.Color( 0xC0C0C0 );
-
         var material = new THREE.SpriteMaterial( {
           map: new THREE.CanvasTexture( generateSprite() ),
-          blending: THREE.AdditiveBlending,
+          blending: THREE.SubtractiveBlending,
           transparent: true
         } );
 
@@ -28,9 +26,10 @@
           scene.add( particle );
         }
 
-        renderer = new THREE.CanvasRenderer();
+        renderer = new THREE.CanvasRenderer({ antialias: true, alpha: true});
         renderer.setPixelRatio( window.devicePixelRatio );
         renderer.setSize( window.innerWidth, window.innerHeight );
+        renderer.setClearColor(0x000000, 0.0);
         container.appendChild( renderer.domElement );
 
         stats = new Stats();
@@ -42,6 +41,7 @@
         //
         window.addEventListener( 'resize', onWindowResize, false );
       }
+      
       function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
         windowHalfY = window.innerHeight / 2;
@@ -58,8 +58,8 @@
         var gradient = context.createRadialGradient( canvas.width / 2, canvas.height / 2, 0, canvas.width / 2, canvas.height / 2, canvas.width / 2 );
         gradient.addColorStop( 0, 'white' );
         gradient.addColorStop( 0.2, 'white' );
-        gradient.addColorStop( 0.4, 'Gainsboro' );
-        gradient.addColorStop( 1, 'Black' );
+        gradient.addColorStop( 0.6, 'white' );
+        gradient.addColorStop( 1, 'rgba(255, 255, 255, 0)' );
         context.fillStyle = gradient;
         context.fillRect( 0, 0, canvas.width, canvas.height );
         return canvas;
@@ -77,7 +77,7 @@
           .start();
         new TWEEN.Tween( particle.position )
           .delay( delay )
-          .to( { x: Math.random() * 4000 - 2000, y: Math.random() * 1000 - 500, z: Math.random() * 4000 - 2000 }, 10000 )
+          .to( { x: Math.random() * 4000 - 2000, y: Math.random() * 4000 - 2000, z: Math.random() * 4000 - 2000 }, 10000 )
           .start();
         new TWEEN.Tween( particle.scale )
           .delay( delay )

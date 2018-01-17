@@ -11,16 +11,16 @@ body {
   box-sizing: border-box; 
 }
 
-img{
-  max-width:40%;
+nav{
+  top:0;
+  position:relative;
 }
 
 table {
   font-family: Raleway;
   font-size: 15px;
-  width: 50%;
-  padding:10px;
 }
+
 
 section {
   padding: 0 7%;
@@ -54,62 +54,133 @@ td{
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Nav Bar */
 
-
-#nav-menu{
-  width:50%;
-  display: inline-block;
+.nav-menu{
+  padding:30px;
+    max-height:150px;
+  text-align:center;
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 3s; /* Firefox < 16 */
       -ms-animation: fadein 3s; /* Internet Explorer */
        -o-animation: fadein 3s; /* Opera < 12.1 */
           animation: fadein 3s;
+  -webkit-transform: translate3d(0,0,0);
+}
+#menu li {
+  display:inline-block;
+  margin: 10px;
+  color: #000;
+  background:#fff;
+  background: rgba(255,255,255, 0.5);
+  -webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+  background:#666;
+  background: rgba(0,0,0, 0.5);
+  color: #fff;
+}
+#menu li a{
+  text-decoration:none;
+  color: #000;
+}
+#menu li.active a:hover{
+  color: #000;
+}
+#menu li:hover{
+  background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+  padding: 9px 18px;
+  display:block;
+}
+#menu li.active a{
+  color: #fff;
+}
+#menu{
+  position:fixed;
+  text-align:center;
+  left:0;
+  height: 40px;
+  z-index: 70;
+  width: 100%;
+  padding: 0;
+  margin:0;
+  bottom:0;
 }
 
-#nav-menu-container{
-  position: fixed;
-  text-align:center;
-  width:100%;
-  height: 200px;
-  background-color: white;
-  bottom: -10px;
+#menu img{
+    width:30%;
+  }
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+    width:40px;
 }
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+#nav-button{
+  z-index:200;
+  position:fixed;
+  top:0;
+  width:40px;
+  padding:10px;
+  right:20px;
+}
+
 
 /*~~~~~~~~~~~~~~~~~~~~~background-color:#666699;~~~~~~~~*/
 /* Sections */
 
 #HomeText{
-  height: 100%;
+  top:0px;
+  height: 100vh;
+  width:100vw;
   position: relative;
-  vertical-align: middle;
   text-align:center;
-  background: rgba(255, 255, 255, .7); 
+  background:rgba(255,255,255,.5);
 }
 
 #particles{
   position: absolute;
   top:0;
   width:100%;
-  height:50%;
+  height:100vh;
+  background:gainsboro;
 }
 
-#logo-center{
-  position: absolute;
-  top:15%;
-  height: 300px;
-  width:100%;
-  vertical-align: middle;
+#logo-center {
+    display: inline-block;
 }
-
-#logo-subheading{
-  bottom:0px;
-  position: fixed;
+#logo-center img {
+    content: '';
+    margin-top: 100px;
+    margin:10px;
+    width: 90%;
+    min-width: 90px;
+    max-width: 600px;
+    display: inline-block;
 }
-
-.logo{
-  min-width: 380px;
-  max-height: 75%;
-}
-
 .details{
   text-align: left;
   content:center;
@@ -181,7 +252,6 @@ td{
   #menu-icon {
     display:inline-block;
   }
-
   #menu ul, nav:active ul { 
     display: none;
     position: absolute;
@@ -194,6 +264,9 @@ td{
     border-radius: 4px 0 4px 4px;
   }
 
+  #menu{
+    visibility: hidden;
+  }
   #menu li {
 
     text-align: center;
@@ -203,8 +276,11 @@ td{
 
   }
 
+
   #menu:hover ul {
 
     display: block;
 
   }
+
+
