@@ -24,8 +24,10 @@
     <script>
     function myFunction(x) {
         x.classList.toggle("change");
-        document.getElementById("menu").style.visibility = "visible";
+        var element = document.getElementById("menu");
+        $(element).toggleClass("hidden-phone ''");
     }
+
     </script>
 
     <!-- fullPage Navigation -->
@@ -34,13 +36,13 @@
 
 <!-- Navigation Menu -->
 <body class="fp-responsive">
-     <ul id="menu" class="navbar-collapse collpase">
+     <ul id="menu" class="hidden-phone">
         <li data-menuanchor="home1" class="active">
             <div id="menu-home">
                 <a href="#home1">Home</a>
             </div>
         </li>
-        <li data-menuanchor="coaching2">
+        <li data-menuanchor="coaching2" data-toggle="collapse" data-target="#menu">
             <a href="#coaching2">
                 <div class="menu-image"><img src="img/coaching.png"/><br></div>Coaching
             </a>
@@ -66,7 +68,7 @@
             </a>
         </li>
     </ul>
-    <div class="container" id="nav-button" class="navbar-toggle" checked data-toggle="collapse" data-target="#menu" onclick="myFunction(this)">
+    <div class="container hidden-desktop" id="nav-button" onclick="myFunction(this)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -77,18 +79,26 @@
             <!--Logo and page Scroll --> 
             <div id="particles"></div> 
             <div id="HomeText">
-
-                <div id="logo-center" class="center">
-                    <img src="img/logo2.png" class="logo center-inner">      
-                </div>
+                <div class="Title"><img src="img/logo2.png" id="logo"></div>
             </div>
         </div>
 
         <!-- Coaching Section  -->
         <div class="section" id="coaching">
             <div class="details">
-                <div class="Title"><div class="Subtitle">Strengths-based </div>coaching</div>
-                <img src="img/coaching.png"></img>
+                <div class="Title"><div class="Subtitle">Strengths-based </div>Leadership Coaching</div>
+                <img src="img/coaching-big.png" class="background-image-right"></img>
+            <p>Focusing on your strengths is a proven way to develop your leadership skills and achieve your short and long-term goals. Knowing what makes you talented and unique will help you perform better, be more productive, and have greater job satisfaction.
+            In our strengths-based coaching sessions, we will:
+            </p>
+                <ul>
+                    <li>explore your top talents as identified in the CliftonStrengths assessment (Gallup),</li>
+                    <li>understand how to build talents into strengths, and</li>
+                    <li>plan for how you can use your strengths to achieve your goals.</li>
+                </ul>
+            <p>
+            Sessions are conducted in-person or online using video conferencing. 
+            </p> 
             </div>
         </div>
 
@@ -96,29 +106,91 @@
         <div class="section" id="teambuilding">
             <div class="details">
                 <div class="Title"><div class="Subtitle">Strengths-based </div>Teambuilding</div>
-                <img src="img/teambuilding.png"></img>
+                <img src="img/teambuilding-big.png" class="background-image-right"></img>
+                <p>
+                Unlock the power of your team by increasing team cohesion and building shared understanding of skills and personality styles.  Research by Gallup has shown that investing in strengths-based team development has many organizational benefits, including profits, customer engagement and employee engagement.
+                Strengths-based teambuilding workshops focus on:
+                </p>
+                <ul>
+                    <li>Understanding individual talents on the team using the CliftonStrengths assessment (Gallup), and</li>
+                    <li>Applying collective talents and strengths to team goals and projects.</li>
+                </ul>
+                <p>Teambuilding programs are conducted in-person and last from ½ day to two days.</p>
             </div>
         </div>
+
         <!-- Survey Section -->
         <div class="section" id="survey">
             <div class="details">
-                <div class="Title">survey section</div>
-                <img src="img/surveys.png"></img>
+                <div class="Title">Culture Surveys</div>
+                <img src="img/surveys-big.png" class="background-image-right"></img>
+                <p>
+                    Your business performance is directly linked to your organizational culture. The Denison Culture survey offers an opportunity to assess your current culture and plan for improvement.  Specifically, you will:
+                </p>
+                <ul>
+                    <li>Understand areas of cultural strength and weakness</li>
+                    <li>Backup your culture change initiative with hard data</li>
+                    <li>Measure your culture improvement over time</li>
+                    <li>Strengthen your business performance</li>
+                    <li>Enhance your ability to attract and retain talent</li>
+                </ul>
+                <p>Culture surveys can be customized for your company and needs. They are conducted online, with follow up workshops to support culture development.
+                </p>
             </div>
         </div>
 
         <!--Workshops Section -->
         <div class="section" id="workshop">
             <div class="details">
-                <div class="Title">workshops</div></div>
-                <img src="img/workshops.png"/></img>
+                <div class="Title">workshops</div>
+                <img src="img/workshops-big.png" class="background-image-right"/></img>
+                <p>
+                    Customized workshops are focused on your organization’s specific learning and development needs.  Each session has a blend of lecture on research-based insights, interactive and group activities, and case-based learning.
+                    Topics and modules include:
+                </p>
+                <table>
+                    <tr>
+                        <th>Leadership</th>
+                        <th>Groups & Teams</th>
+                        <th>Groups & Teams</th>
+                    </tr>
+                    <td>
+                        <ul>
+                            <li>Emotional intelligence</li>
+                            <li>Leadership styles</li>
+                            <li>Authentic leadership</li>
+                            <li>Adaptive leadership</li>
+                            <li>Team leadership</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Teambuilding</li>
+                            <li>Managing conflict</li>
+                            <li>Overcoming dysfunctions</li>
+                            <li>High performing teams</li>
+                            <li>Global teams</li>
+                        </ul>
+                    </td>
+
+                    <td>
+                        <ul>
+                            <li>Culture</li>
+                            <li>Innovative enterprises</li>
+                            <li>Change leadership</li>
+                            <li>Learning organizations</li>
+                        </ul>
+                    </td>
+                </table>
+            </div>
         </div>
 
         <!-- About Section -->
         <div class="section" id="about">
             <div class="details">
                 <div class="Title">about</div>
-                <img src="img/about.png"/></img>
+                <img src="img/about-big.png" class="background-image-right"/></img>
+                <p>GoBrighter is led by Jennifer (Jenny) Stine, Ph.D. and is supported by a network of outstanding colleagues. Stine is an expert in the development of world-class executive and professional programs, with over a decade of leadership experience at Harvard and MIT.  Since 2012, Stine has been an independent consultant, working both for top universities and Fortune Global 500 companies.  In addition to coaching and consulting, she is an instructor at Harvard Extension School and Harvard Division of Continuing Education where she teaches organizational behavior, leadership, and teamwork. Stine holds three degrees from Stanford University, including a Ph.D. in history.  She is a Gallup-Certified Strengths Coach, and a certified Denison consultant.</p>
             </div>
         </div>
 

@@ -1,5 +1,10 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+$(document).on('click','#nav-button',function(e) {
+    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
+        $(this).collapse('show');
+    }
+});
 
 
 $(document).ready(function() {
@@ -55,7 +60,7 @@ $(document).ready(function() {
     paddingTop: 0,
     paddingBottom: 0,
     fixedElements: '#header, .footer',
-    responsiveWidth: 400,
+    responsiveWidth: 640,
     responsiveHeight: 0,
     responsiveSlides: false,
     parallax: false,
@@ -82,10 +87,18 @@ $(document).ready(function() {
         var loadedSection = $(this);
         if(index == 1){
             $('#menu-home').hide();
-            $('.menu-image').fadeIn();
-            $('#menu').css({top:300});
+
+            if (screen.width > 500) {
+                $('.menu-image').fadeIn();
+                $('#menu').css({top:300}); 
+            }
+            else{
+                $('#menu').css({top:70});
+            }
+
             $('#menu').fadeIn(800);
         }
+
         if(index != 1){
             $('#menu-home').show();
             $('.menu-image').hide();
@@ -94,7 +107,8 @@ $(document).ready(function() {
         }
     },
     afterRender: function(){ },
-    afterResponsive: function(isResponsive){ },
+    afterResponsive: function(isResponsive){
+    },
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });
