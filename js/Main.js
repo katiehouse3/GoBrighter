@@ -40,7 +40,7 @@ $(document).ready(function() {
     offsetSections: false,
     resetSliders: false,
     fadingEffect: false,
-    normalScrollElements: '#test, #teambuilding',
+    normalScrollElements: '#1, #2',
     scrollOverflow: false,
     scrollOverflowReset: true,
     scrollOverflowOptions: null,
@@ -60,7 +60,7 @@ $(document).ready(function() {
     paddingTop: 0,
     paddingBottom: 0,
     fixedElements: '#header, .footer',
-    responsiveWidth: 640,
+    responsiveWidth: 680,
     responsiveHeight: 0,
     responsiveSlides: false,
     parallax: false,
@@ -107,8 +107,7 @@ $(document).ready(function() {
         }
     },
     afterRender: function(){ },
-    afterResponsive: function(isResponsive){
-    },
+    afterResponsive: function(isResponsive){},
     afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
     onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
   });

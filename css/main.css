@@ -51,20 +51,18 @@ td{
   vertical-align: top;
 }
 
+button, input[type="submit"], input[type="reset"] {
+    background: none !important;
+    color: inherit;
+    border: none;
+    padding: 0! important;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit !important;
+}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Nav Bar */
-
-.nav-menu{
-  padding:30px;
-    max-height:150px;
-  text-align:center;
-  -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 3s; /* Firefox < 16 */
-      -ms-animation: fadein 3s; /* Internet Explorer */
-       -o-animation: fadein 3s; /* Opera < 12.1 */
-          animation: fadein 3s;
-  -webkit-transform: translate3d(0,0,0);
-}
 
 #menu li {
   display:inline-block;
@@ -173,10 +171,12 @@ td{
 
 
 #logo{
-    max-width:40%;
-    min-width:280px;
-    height:auto;
-    vertical-align: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  width:40%;
+  min-width:300px;
 }
 
 .details{
@@ -234,13 +234,6 @@ td{
   padding:20px;
 }
 
-.Subtitle{
-  color: black;
-  font-size: 15pt;
-  font-family: Raleway;
-  padding:10px;
-}
-
 /*FADING QUERY*/
 @keyframes fadein {
     from { opacity: 0; }
@@ -272,7 +265,7 @@ td{
 }
 
 /*MEDIA QUERY*/
-@media only screen and (max-width : 640px) {
+@media only screen and (max-width : 680px) {
 
   header {
     position: absolute;
@@ -282,6 +275,11 @@ td{
     position:fixed;
     top:20;
   }
+
+  .section{
+    height:40vh;
+  }
+
 
   #menu ul, nav:active ul { 
     position: absolute;
@@ -308,19 +306,6 @@ td{
   .menu-image{
     display: none;
   }
-
-  .center{
-    position:absolute;
-    top: -100%
-    bottom: -100%
-    left: -100%
-    right: -100%
-    margin: auto;
-  }
-
-#logo{
-  top:200px;
-}
 
 #particles{
   display:none;
