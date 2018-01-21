@@ -309,10 +309,6 @@ button, input[type="submit"], input[type="reset"] {
     display: none;
   }
 
-#particles{
-  display:none;
-  }
-
 #HomeText{
   background:WhiteSmoke;
 }
