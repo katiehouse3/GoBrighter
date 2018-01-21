@@ -1,4 +1,4 @@
-if ( $(window).width() > 739) {      
+if ( $(window).width() > 1100) {      
      var container, stats;
       var camera, scene, renderer, particle;
       var mouseX = 0, mouseY = 0;
