@@ -1,8 +1,4 @@
 $(document).ready(function() {
-
-    if (/Android|BlackBerry|iPhone|iPad|iPod|webOS/i.test(navigator.userAgent) === false) {
-        particles(); //Run main_parallax() not a mobile device
-    }​
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
