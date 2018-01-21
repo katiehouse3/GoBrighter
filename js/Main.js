@@ -1,13 +1,24 @@
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-$(document).on('click','#nav-button',function(e) {
-    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-        $(this).collapse('show');
-    }
-});
-
-
 $(document).ready(function() {
+
+           var element = document.getElementById("menu");
+           var nav = document.getElementById("nav-button");
+
+            $('#nav-button').on('touchstart click', function(e) {    
+            e.preventDefault(); //prevent default behavior
+
+            if(e.type == "touchstart") {
+               $(element).toggleClass("hidden-phone null");
+                $(nav).toggleClass("change null");
+            } 
+
+            else if(e.type == "click") {
+                $(element).toggleClass("hidden-phone null");
+                $(nav).toggleClass("change null");
+            }
+            });
+
+
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
@@ -90,10 +101,10 @@ $(document).ready(function() {
 
             if (screen.width > 500) {
                 $('.menu-image').fadeIn();
-                $('#menu').css({top:300}); 
+                $('#menu').css({top:550}); 
             }
             else{
-                $('#menu').css({top:70});
+                $('#menu').css({top:10});
             }
 
             $('#menu').fadeIn(800);
@@ -102,7 +113,7 @@ $(document).ready(function() {
         if(index != 1){
             $('#menu-home').show();
             $('.menu-image').hide();
-            $('#menu').css({top:0});
+            $('#menu').css({top:10});
             $('#menu').fadeIn(800);
         }
     },

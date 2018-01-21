@@ -5,6 +5,7 @@ body {
   margin: 0; 
   font-weight: 500;
   text-align: center;
+   -webkit-text-size-adjust: none;
 }
 
 * {
@@ -24,9 +25,6 @@ table {
 
 section {
   margin: 0;
-  max-width: 100vw;
-  width:auto;
-  height:100vh;
   text-align:center;
 }
 
@@ -97,15 +95,18 @@ button, input[type="submit"], input[type="reset"] {
   color: #fff;
 }
 #menu{
-  position:fixed;
+  position:absolute;
   text-align:center;
   left:0;
+  right:0px;
+  bottom:0px;
   height: 40px;
   z-index: 70;
   width: 100%;
   padding: 0;
   margin:0;
   bottom:0;
+  cursor:pointer   
 }
 
 #menu img{
@@ -141,10 +142,12 @@ button, input[type="submit"], input[type="reset"] {
 #nav-button{
   z-index:200;
   position:fixed;
-  top:30px;
+  top:0;
   width:40px;
-  padding:10px;
+  padding:30px;
   left:10px;
+  cursor:pointer;
+  margin: 0 auto; 
 }
 
 
@@ -175,41 +178,30 @@ button, input[type="submit"], input[type="reset"] {
   top: 35%;
   left: 50%;
   transform: translate(-50%, -35%);
-  width:40%;
+  width:35%;
   min-width:300px;
 }
 
 .details{
-  margin:0;
+  margin:10;
   padding:20px;
-  max-width:100%;
-  padding:30px;
+  max-width:50%;
+  left: 50%;
+  top:40%;
+  min-width:350px;
+  transform: translate(-50%, -40%);
+  padding-left:40px;
   font-family:Raleway;
   text-align:left;
   position:absolute;
-  top:0;
-}
-
-.details-right{
-  margin:0;
-  padding:20px;
-  max-width:60%;
-  min-width:200px;
-  font-family:Raleway;
-  text-align:left;
-  position:fixed;
-  right:0;
-  display: inline-block;
-  vertical-align: top; 
 }
 
 .background-image-right{
-  max-width:40%;
+  max-width:50%;
   opacity:0.5;
   z-index:-100;
-  right:0;
+  right:10px;
   bottom:0;
-  padding:40px;
   position:relative;
 }
 
@@ -230,10 +222,13 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 .Title{
-  font-size: 40pt;
+  font-size:6.2em;
+  font-weight:500;
   font-family: Raleway;
   text-align: center;
-  padding:20px;
+  padding-bottom: 40px;
+  padding-top: 20px;
+  top:0;
 }
 
 /*FADING QUERY*/
@@ -278,27 +273,24 @@ button, input[type="submit"], input[type="reset"] {
     top:20;
   }
 
-  .section{
-    height:40vh;
-  }
-
-
   #menu ul, nav:active ul { 
-    position: absolute;
-    padding: 20px;
+    position: fixed;
+    padding-top: 30px;
     background: #fff;
-    border: 5px solid #444;
+    border: 5px solid gainsboro;
     right: 20px;
-    top: 170px;
     width: 50%;
     border-radius: 4px 0 4px 4px;
+    z-index:300;
   }
 
   #menu li {
     text-align: center;
     width: 100%;
-    padding: 10px 0;
+    padding: 10px;
     margin: 0;
+    background: rgba(255,255,255, 1);
+    border: 0.5px;
   }
 
   #menu:hover ul {
@@ -315,4 +307,14 @@ button, input[type="submit"], input[type="reset"] {
 
 #HomeText{
   background:WhiteSmoke;
+}
+
+.Title{
+  font-size: 2em; 
+  top:0;
+  position:absolute;
+}
+
+.null{
+  visibility: visible;
 }

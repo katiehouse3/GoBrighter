@@ -21,61 +21,51 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css"">
     <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.css"">
 
-    <script>
-    function myFunction(x) {
-        x.classList.toggle("change");
-        var element = document.getElementById("menu");
-        $(element).toggleClass("hidden-phone ''");
-    }
-
-    </script>
-
     <!-- fullPage Navigation -->
     <link href="css/jquery.fullPage.css" rel="stylesheet">
 </head>
 
-<body class="fp-auto-height-responsive">
-
+<body class="fp-auto-width-responsive">
     <!-- Nav Menu -->
-     <ul id="menu" class="hidden-phone">
-        <li data-menuanchor="home1" class="active">
-            <div id="menu-home">
-                <a href="#home1">Home</a>
-            </div>
-        </li>
-        <li data-menuanchor="coaching2" data-toggle="collapse" data-target="#menu">
-            <a href="#coaching2">
-                <div class="menu-image"><img src="img/coaching.png"/><br></div>Coaching
-            </a>
-        </li>
-        <li data-menuanchor="teambuilding3">
-            <a href="#teambuilding3">
-                <div class="menu-image"><img src="img/teambuilding.png"/><br></div>Team Building
-            </a>
-        </li>
-        <li data-menuanchor="survey4">
-            <a href="#survey4">
-                <div class="menu-image"><img src="img/surveys.png"/><br></div>Culture Surveys
-            </a>
-        </li>
-        <li data-menuanchor="workshop5">
-            <a href="#workshop5">
-                <div class="menu-image"><img src="img/workshops.png"/><br></div>Workshops
-            </a>
-        </li>
-        <li data-menuanchor="about6">
-            <a href="#about6">
-                <div class="menu-image"><img src="img/about.png"/><br></div>About
-            </a>
-        </li>
-    </ul>
+         <ul id="menu" class="hidden-phone">
+            <li data-menuanchor="home1" class="active">
+                <div id="menu-home">
+                    <a href="#home1">Home</a>
+                </div>
+            </li>
+            <li data-menuanchor="coaching2" data-toggle="collapse" data-target="#menu">
+                <a href="#coaching2">
+                    <div class="menu-image"><img src="img/coaching.png"/><br></div>Coaching
+                </a>
+            </li>
+            <li data-menuanchor="teambuilding3">
+                <a href="#teambuilding3">
+                    <div class="menu-image"><img src="img/teambuilding.png"/><br></div>Team Building
+                </a>
+            </li>
+            <li data-menuanchor="survey4">
+                <a href="#survey4">
+                    <div class="menu-image"><img src="img/surveys.png"/><br></div>Culture Surveys
+                </a>
+            </li>
+            <li data-menuanchor="workshop5">
+                <a href="#workshop5">
+                    <div class="menu-image"><img src="img/workshops.png"/><br></div>Workshops
+                </a>
+            </li>
+            <li data-menuanchor="about6">
+                <a href="#about6">
+                    <div class="menu-image"><img src="img/about.png"/><br></div>About
+                </a>
+            </li>
+        </ul>
 
-    <!-- Mobile Nav Menu -->
-    <button class="container hidden-desktop" id="nav-button" onclick="myFunction(this)">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-    </button>
+        <!-- Mobile Nav Menu -->
+        <button class="container hidden-desktop" id="nav-button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
 
     <div id="fullpage">
 
@@ -83,14 +73,14 @@
         <div class="section" id="home"> 
             <div id="particles"></div> 
             <div id="HomeText">
-                <div class="Title"><img src="img/logo2.png" id="logo"></div>
+                <img src="img/logo2.png" id="logo">
             </div>
         </div>
 
         <!-- Coaching Section  -->
         <div class="section" id="coaching">
+            <div class="Title">Leadership Coaching</div>
             <div class="details">
-                <div class="Title">Leadership Coaching</div>
                 <p>Focusing on your strengths is a proven way to develop your leadership skills and achieve your short and long-term goals. Knowing what makes you talented and unique will help you perform better, be more productive, and have greater job satisfaction.
                 In our strengths-based coaching sessions, we will:
                 </p>
