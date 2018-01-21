@@ -39,9 +39,9 @@
         document.addEventListener( 'touchstart', onDocumentTouchStart, false );
         document.addEventListener( 'touchmove', onDocumentTouchMove, false );
         //
-        window.addEventListener( 'resize', onWindowResize, false );
+       // window.addEventListener( 'resize', onWindowResize, false );
       }
-      
+      /*
       function onWindowResize() {
         windowHalfX = window.innerWidth / 2;
         windowHalfY = window.innerHeight / 2;
@@ -49,7 +49,7 @@
         camera.updateProjectionMatrix();
         renderer.setSize( window.innerWidth, window.innerHeight );
       }
-
+*/
       function generateSprite() {
         var canvas = document.createElement( 'canvas' );
         canvas.width = 16;

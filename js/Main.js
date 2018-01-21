@@ -17,7 +17,7 @@ $(document).ready(function() {
     sectionsColor : [],
     paddingTop: 0,
     paddingBottom: 0,
-    fixedElements: '#nav-button, .footer',
+    fixedElements: '#1, .footer',
     responsiveWidth: 1100,
     responsiveHeight: 0,
     responsiveSlides: false,
