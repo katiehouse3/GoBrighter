@@ -1,12 +1,3 @@
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-$(document).on('click','#nav-button',function(e) {
-    if( $(e.target).is('a:not(".dropdown-toggle")') ) {
-        $(this).collapse('show');
-    }
-});
-
-
 $(document).ready(function() {
   $('#fullpage').fullpage({
     //Navigation
@@ -20,39 +11,6 @@ $(document).ready(function() {
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
 
-    //Scrolling
-    css3: true,
-    scrollingSpeed: 700,
-    autoScrolling: true,
-    fitToSection: true,
-    fitToSectionDelay: 1000,
-    scrollBar: false,
-    easing: 'easeInOutCubic',
-    easingcss3: 'ease',
-    loopBottom: false,
-    loopTop: false,
-    loopHorizontal: true,
-    continuousVertical: false,
-    continuousHorizontal: false,
-    scrollHorizontally: false,
-    interlockedSlides: false,
-    dragAndMove: false,
-    offsetSections: false,
-    resetSliders: false,
-    fadingEffect: false,
-    normalScrollElements: '#1, #2',
-    scrollOverflow: false,
-    scrollOverflowReset: true,
-    scrollOverflowOptions: null,
-    touchSensitivity: 15,
-    normalScrollElementTouchThreshold: 5,
-    bigSectionsDestination: null,
-
-    //Accessibility
-    keyboardScrolling: true,
-    animateAnchor: true,
-    recordHistory: true,
-
     //Design
     controlArrows: true,
     verticalCentered: true,
@@ -60,7 +18,7 @@ $(document).ready(function() {
     paddingTop: 0,
     paddingBottom: 0,
     fixedElements: '#nav-button, .footer',
-    responsiveWidth: 700,
+    responsiveWidth: 1100,
     responsiveHeight: 0,
     responsiveSlides: false,
     parallax: false,
