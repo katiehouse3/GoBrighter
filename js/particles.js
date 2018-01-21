@@ -1,3 +1,4 @@
+if ( $(window).width() > 739) {      
      var container, stats;
       var camera, scene, renderer, particle;
       var mouseX = 0, mouseY = 0;
@@ -116,3 +117,8 @@
         camera.lookAt( scene.position );
         renderer.render( scene, camera );
       }
+
+      } 
+else {
+  //Add your javascript for small screens here 
+}
