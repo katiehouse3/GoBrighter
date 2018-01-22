@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    //Hide and show navigation on nav-button click or tap
+    //Hide and show navigation on nav-button click or touch
     var flag = false;
     var nav = document.getElementById("nav-button");
     var menu = document.getElementById("menu");
@@ -15,11 +15,12 @@ $(document).ready(function() {
       return false
     });
 
+//Fullpage Options
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
     lockAnchors: false,
-    anchors:['home1','coaching2', 'teambuilding3', 'survey4', 'workshop5','about6'],
+    anchors:['home1','coaching2', 'teambuilding3', 'survey4', 'workshop5','about6'], //section anchors
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['home','coaching', 'teambuilding', 'survey', 'workshop','about'],
@@ -48,17 +49,11 @@ $(document).ready(function() {
 
     //events
     onLeave: function(index, nextIndex, direction){
-        //after leaving section 2
-        if(index == 1 && direction =='down'){
-            $('#menu').fadeOut(800);
-        }
-
-        if(index == 2 && direction =='up'){
-            $('#menu').fadeOut(800);
-        }
     },
     afterLoad: function(anchorLink, index){
         var loadedSection = $(this);
+
+        // show images and move navbar
         if(index == 1){
             $('#menu-home').hide();
 
@@ -73,6 +68,7 @@ $(document).ready(function() {
             $('#menu').fadeIn(800);
         }
 
+        // hide images and navbar on top
         if(index != 1){
             $('#menu-home').show();
             $('.menu-image').hide();

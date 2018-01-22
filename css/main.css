@@ -11,10 +11,6 @@ body {
   box-sizing: border-box; 
 }
 
-h1{
-  font-family: 'Raleway';
-}
-
 nav{
   top:0;
   position:relative;
@@ -61,13 +57,13 @@ td{
 }
 
 button, input[type="submit"], input[type="reset"] {
-    background: none !important;
-    color: inherit;
-    border: none;
-    padding: 0! important;
-    font: inherit;
-    cursor: pointer;
-    outline: inherit !important;
+  background: none !important;
+  color: inherit;
+  border: none;
+  padding: 0! important;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit !important;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -116,38 +112,39 @@ button, input[type="submit"], input[type="reset"] {
   margin:0;
   bottom:0;
 }
-
 #menu img{
-    width:30%;
-  }
+  width:30%;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* Mobile Nav Bar */
 
 .container {
-    display: inline-block;
-    cursor: pointer;
-    width:50px;
+  display: inline-block;
+  cursor: pointer;
+  width:50px;
 }
 
 .bar1, .bar2, .bar3 {
-    width: 35px;
-    height: 5px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
 }
-
 .change .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
-
-.change .bar2 {opacity: 0;}
-
+.change .bar2 {
+  opacity: 0;
+}
 .change .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
-#nav-button{
+#nav-button {
   z-index:200;
   position:fixed;
   top:30px;
@@ -155,7 +152,6 @@ button, input[type="submit"], input[type="reset"] {
   padding:10px;
   left:10px;
 }
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /* Sections */
@@ -197,14 +193,25 @@ button, input[type="submit"], input[type="reset"] {
   padding:20px;
 }
 
-.background-image-right{
+.background-image{
+  height:100%;
+  position:relative;
+  z-index:-100;
+}
+
+.background-image img{
   height:100%;
   min-width:300px;
   opacity:0.2;
-  z-index:-100;
-  bottom:0;
-  padding:40px;
-  position:relative;
+  position:absolute;
+}
+
+.image-right{
+  right:0;
+}
+
+.image-left{
+  left:0;
 }
 
 .link{
@@ -212,7 +219,6 @@ button, input[type="submit"], input[type="reset"] {
   font-size: 20px;
   font-family: Raleway;
 }
-
 
 /*FADING QUERY*/
 @keyframes fadein {
@@ -246,11 +252,7 @@ button, input[type="submit"], input[type="reset"] {
 
 /*MEDIA QUERY*/
 @media only screen and (max-width : 680px) {
-
-  header {
-    position: absolute;
-  }
-
+  
   #menu{
     position:fixed;
     top:20;
@@ -259,6 +261,7 @@ button, input[type="submit"], input[type="reset"] {
   .section{
     display:block;
     overflow:auto;
+    height:auto;
   }
 
   #menu ul, nav:active ul { 
@@ -302,17 +305,12 @@ button, input[type="submit"], input[type="reset"] {
     display: inline-block;
     overflow:auto;
     vertical-align:top;
-    padding-left:40px;
     background:rgba(255,255,255,.6);
     min-width:100%;
     margin:0;
+    padding-left: 50px;
   }
 
-  .background-image-right{
-    height:auto;
-  }
-
-  #workshop-table li{
-    font-size:12px;
-    word-wrap: break-word;
+  .background-image{
+    height:50%;
   }

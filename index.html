@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Mom's Website</title>
+    <title>Go Brighter</title>
+    
     <meta name="pinterest" content="nopin" />
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
     <link rel="stylesheet" href="css/main.css">
 
+    <!--Import Google Icon Font and CSS Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway" rel="stylesheet">
-
-    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
-    <!--Import bootstrap.css-->
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.css"">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css"">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.css"">
+
+    <!-- jquery and fullpage.js for scrolling effect -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fullPage.js"></script>
 
     <!-- fullPage Navigation -->
     <link href="css/jquery.fullPage.css" rel="stylesheet">
+    <script src="js/Main.js"></script>
+
+    <!-- Bootstrap -->
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 </head>
 
-<body>
+<body class="fp-auto-height-responsive">
 
     <!-- Nav Menu -->
      <ul id="menu" class="hidden-phone">
@@ -94,7 +99,7 @@
                 Sessions are conducted in-person or online using video conferencing. 
                 </p> 
             </div>
-             <img src="img/coaching-big.png" class="background-image-right"></img>
+            <div class="background-image"><img src="img/coaching-big.png" class="image-left"></img></div>
         </div>
 
         <!-- Teams Section -->
@@ -111,7 +116,7 @@
                 </ul>
                 <p>Teambuilding programs are conducted in-person and last from ½ day to two days.</p>
             </div>
-            <img src="img/teambuilding-big.png" class="background-image-right"></img>
+             <div class="background-image"><img src="img/teambuilding-big.png" class="image-right"></img></div>
         </div>
 
         <!-- Survey Section -->
@@ -131,7 +136,7 @@
                 <p>Culture surveys can be customized for your company and needs. They are conducted online, with follow up workshops to support culture development.
                 </p>
             </div>
-            <img src="img/surveys-big.png" class="background-image-right"></img>
+            <div class="background-image"><img src="img/surveys-big.png" class="image-left"></img></div>
         </div>
 
         <!--Workshops Section -->
@@ -142,11 +147,11 @@
                     Customized workshops are focused on your organization’s specific learning and development needs.  Each session has a blend of lecture on research-based insights, interactive and group activities, and case-based learning.
                     Topics and modules include:
                 </p>
-                <table id="workshop-table">
+                <table id="workshop-table" class="hidden-phone">
                     <tr>
                         <th>Leadership</th>
                         <th>Groups & Teams</th>
-                        <th>Groups & Teams</th>
+                        <th>Organizations</th>
                     </tr>
                     <td>
                         <ul>
@@ -176,8 +181,35 @@
                         </ul>
                     </td>
                 </table>
+            <!-- WORK IN PROGRESS : mobile list 
+                <div id="workshop-list" class="hidden-desktop">
+                    <b>Leadership</b>
+                    <ul>
+                        <li>Emotional intelligence</li>
+                        <li>Leadership styles</li>
+                        <li>Authentic leadership</li>
+                        <li>Adaptive leadership</li>
+                        <li>Team leadership</li>
+                    </ul>
+                    <b>Groups & Teams</b>
+                    <ul>
+                        <li>Teambuilding</li>
+                        <li>Managing conflict</li>
+                        <li>Overcoming dysfunctions</li>
+                        <li>High performing teams</li>
+                        <li>Global teams</li>
+                    </ul>
+                    <b>Leadership</b>
+                    <ul>
+                        <li>Culture</li>
+                        <li>Innovative enterprises</li>
+                        <li>Change leadership</li>
+                        <li>Learning organizations</li>
+                    </ul>
+                </div>
+                -->
             </div>
-            <img src="img/workshops-big.png" class="background-image-right"/></img>
+             <div class="background-image"><img src="img/workshops-big.png" class="image-right"></img></div>
         </div>
 
         <!-- About Section -->
@@ -193,7 +225,7 @@
                     For more information on any of the services described here, please email: <a href="mailto:jenniferkstine@gmail.com">jenniferkstine@gmail.com</a>.
                 </p>
             </div>
-            <img src="img/about-big.png" class="background-image-right"/></img>
+            <div class="background-image"><img src="img/about-big.png" class="image-left"></img></div>
         </div>
 
     </div>
@@ -206,19 +238,11 @@
     <script src="js/three/CanvasRenderer.js"></script>
     <script src="js/three/stats.min.js"></script>
     <script src="js/three/tween.min.js"></script>
-    <script src="js/particles.js"></script>     <!-- Edited by Katie House -->
 
-    <!-- jquery and fullpage.js for scrolling effect -->
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fullPage.js"></script>
+    <!-- Home Page animation Edited by Katie House -->
+    <script src="js/particles.js"></script>     
 
-    <!-- Bootstrap -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <script src="js/Main.js"></script>
-
+    
 
 </body>
 </html>
