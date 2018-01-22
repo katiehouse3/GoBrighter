@@ -258,6 +258,7 @@ button, input[type="submit"], input[type="reset"] {
 
   .section{
     height:100%;
+    display:block;
   }
 
   #menu ul, nav:active ul { 
@@ -298,11 +299,10 @@ button, input[type="submit"], input[type="reset"] {
   }
 
   .details{
-    display: inline-block;
+    display: block;
     vertical-align:top;
     padding-left:40px;
     background:rgba(255,255,255,.6);
-    height:150%;
     min-width:90%;
   }
 
