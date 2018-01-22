@@ -257,8 +257,8 @@ button, input[type="submit"], input[type="reset"] {
   }
 
   .section{
-    height:100%;
     display:block;
+    overflow:auto;
   }
 
   #menu ul, nav:active ul { 
@@ -299,11 +299,13 @@ button, input[type="submit"], input[type="reset"] {
   }
 
   .details{
-    display: block;
+    display: inline-block;
+    overflow:auto;
     vertical-align:top;
     padding-left:40px;
     background:rgba(255,255,255,.6);
-    min-width:90%;
+    min-width:100%;
+    margin:0;
   }
 
   .background-image-right{
