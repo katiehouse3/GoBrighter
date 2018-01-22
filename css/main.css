@@ -11,16 +11,24 @@ body {
   box-sizing: border-box; 
 }
 
+h1{
+  font-family: 'Raleway';
+}
+
 nav{
   top:0;
   position:relative;
 }
 
 table {
-  font-family: Raleway;
-  font-size: 15px;
+  font-family: 'Open Sans';
+  padding-top: 20px;
+  padding-bottom:20px;
 }
 
+th{
+  font-size:17px;
+}
 
 section {
   margin: 0;
@@ -35,14 +43,15 @@ image{
 }
 
 ul{
-  font-family: Raleway;
-  font-size: 15px;
+  font-size: 16px;
   color: black;
   font-family: 'Open Sans';
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 p {
-  font-size: 15px;
+  font-size: 16px;
   color: black;
   font-family: 'Open Sans';
 }
@@ -169,7 +178,6 @@ button, input[type="submit"], input[type="reset"] {
   text-align:center;
 }
 
-
 #logo{
   position: absolute;
   top: 35%;
@@ -181,30 +189,19 @@ button, input[type="submit"], input[type="reset"] {
 
 .details{
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
+  background:rgba(255,255,255,.85);
   width:50%;
-}
-
-.details-right{
-  margin:0;
   padding:20px;
-  max-width:60%;
-  min-width:200px;
-  font-family:Raleway;
-  text-align:left;
-  position:fixed;
-  right:0;
-  display: inline-block;
-  vertical-align: top; 
 }
 
 .background-image-right{
-  max-width:40%;
-  opacity:0.5;
+  height:100%;
+  min-width:300px;
+  opacity:0.2;
   z-index:-100;
-  right:0;
   bottom:0;
   padding:40px;
   position:relative;
@@ -212,7 +209,7 @@ button, input[type="submit"], input[type="reset"] {
 
 .background-image-left{
   max-width:40%;
-  opacity:0.5;
+  opacity:0.2;
   z-index:-100;
   left:0;
   bottom:0;
@@ -226,14 +223,6 @@ button, input[type="submit"], input[type="reset"] {
   font-family: Raleway;
 }
 
-.Title{
-  font-family: Raleway;
-  font-size: 6em; 
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  position:absolute;
-}
 
 /*FADING QUERY*/
 @keyframes fadein {
@@ -281,7 +270,6 @@ button, input[type="submit"], input[type="reset"] {
     height:40vh;
   }
 
-
   #menu ul, nav:active ul { 
     position: absolute;
     padding: 20px;
@@ -309,24 +297,30 @@ button, input[type="submit"], input[type="reset"] {
     display: none;
   }
 
-#HomeText{
-  background:WhiteSmoke;
-}
+  #HomeText{
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* ff3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%, rgba(255,255,255,1)), color-stop(68%, rgba(250,250,250,1)), color-stop(69%, rgba(249,249,249,1)), color-stop(83%, rgba(247,247,247,1)), color-stop(100%, rgba(245,245,245,1))); /* safari4+,chrome */
+    background:-webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* safari5.1+,chrome10+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* opera 11.10+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* ie10+ */
+    background:radial-gradient(ellipse at center, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* w3c */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=1 ); /* ie6-9 */
+  }
 
-.Title{
-  font-family: Raleway;
-  font-size: 3em; 
-  top: 0;
-  left: 50%;
-  position:absolute;
-  padding:5px;
-}
+  .details{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width:330px;
+    padding-left:40px;
+    background:rgba(255,255,255,.6);
+  }
 
-.details{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width:330px;
-  padding-left:40px;
+  #workshop-table li{
+    font-size:11px;
+  }
+
+.background-image-right{
+  height:auto;
 }
