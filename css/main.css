@@ -257,7 +257,9 @@ button, input[type="submit"], input[type="reset"] {
   }
 
   .section{
-    height:40vh;
+    height:150%;
+    display: inline-block;
+    vertical-align:top;
   }
 
   #menu ul, nav:active ul { 
@@ -302,15 +304,16 @@ button, input[type="submit"], input[type="reset"] {
     vertical-align:top;
     padding-left:40px;
     background:rgba(255,255,255,.6);
-    height:100%;
+    height:auto;
     min-width:90%;
+    word-wrap: break-word;
   }
 
-.background-image-right{
-  height:auto;
-}
+  .background-image-right{
+    height:auto;
+  }
 
-#workshop-table li{
-  font-size:12px;
-  word-wrap: break-word;
-}
+  #workshop-table li{
+    font-size:12px;
+    word-wrap: break-word;
+  }
