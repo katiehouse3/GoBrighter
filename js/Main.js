@@ -1,5 +1,19 @@
 $(document).ready(function() {
-    if($('head').width() > 900) { $('body').append('<script src="js/particles.js"><\/script>'); }
+
+    //Hide and show navigation on nav-button click or tap
+    var flag = false;
+    var nav = document.getElementById("nav-button");
+    var menu = document.getElementById("menu");
+
+    $(nav).bind('touchstart click', function(){
+      if (!flag) {
+        flag = true;
+        setTimeout(function(){ flag = false; }, 100);
+        $(nav).toggleClass("change ''");
+        $(menu).toggleClass("hidden-phone ''");
+      }
+      return false
+    });
 
   $('#fullpage').fullpage({
     //Navigation
@@ -50,7 +64,7 @@ $(document).ready(function() {
 
             if (screen.width > 500) {
                 $('.menu-image').fadeIn();
-                $('#menu').css({top:300}); 
+                $('#menu').css({top:600}); 
             }
             else{
                 $('#menu').css({top:70});

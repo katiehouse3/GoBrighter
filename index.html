@@ -21,15 +21,6 @@
     <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css"">
     <link rel="stylesheet" href="css/bootstrap/bootstrap-responsive.css"">
 
-    <script>
-    function myFunction(x) {
-        x.classList.toggle("change");
-        var element = document.getElementById("menu");
-        $(element).toggleClass("hidden-phone ''");
-    }
-
-    </script>
-
     <!-- fullPage Navigation -->
     <link href="css/jquery.fullPage.css" rel="stylesheet">
 </head>
@@ -71,7 +62,7 @@
     </ul>
 
     <!-- Mobile Nav Menu -->
-    <button class="container hidden-desktop" id="nav-button" onclick="myFunction(this)">
+    <button class="container hidden-desktop" id="nav-button">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -83,14 +74,14 @@
         <div class="section" id="home"> 
            <div id="particles" class="hidden-phone"></div>
             <div id="HomeText">
-                <div class="Title"><img src="img/logo2.png" id="logo"></div>
+                <img src="img/logo2.png" id="logo">
             </div>
         </div>
 
         <!-- Coaching Section  -->
         <div class="section" id="coaching">
+            <div class="Title">Leadership Coaching</div>
             <div class="details">
-                <div class="Title">Leadership Coaching</div>
                 <p>Focusing on your strengths is a proven way to develop your leadership skills and achieve your short and long-term goals. Knowing what makes you talented and unique will help you perform better, be more productive, and have greater job satisfaction.
                 In our strengths-based coaching sessions, we will:
                 </p>
@@ -108,9 +99,8 @@
 
         <!-- Teams Section -->
         <div class="section" id="teambuilding">
+            <div class="Title">Teambuilding</div>
             <div class="details">
-                <div class="Title">Teambuilding</div>
-                <img src="img/teambuilding-big.png" class="background-image-right"></img>
                 <p>
                 Unlock the power of your team by increasing team cohesion and building shared understanding of skills and personality styles.  Research by Gallup has shown that investing in strengths-based team development has many organizational benefits, including profits, customer engagement and employee engagement.
                 Strengths-based teambuilding workshops focus on:
@@ -121,13 +111,13 @@
                 </ul>
                 <p>Teambuilding programs are conducted in-person and last from ½ day to two days.</p>
             </div>
+            <img src="img/teambuilding-big.png" class="background-image-right"></img>
         </div>
 
         <!-- Survey Section -->
         <div class="section" id="survey">
+            <div class="Title">Culture Surveys</div>
             <div class="details">
-                <div class="Title">Culture Surveys</div>
-                <img src="img/surveys-big.png" class="background-image-right"></img>
                 <p>
                     Your business performance is directly linked to your organizational culture. The Denison Culture survey offers an opportunity to assess your current culture and plan for improvement.  Specifically, you will:
                 </p>
@@ -141,13 +131,13 @@
                 <p>Culture surveys can be customized for your company and needs. They are conducted online, with follow up workshops to support culture development.
                 </p>
             </div>
+            <img src="img/surveys-big.png" class="background-image-right"></img>
         </div>
 
         <!--Workshops Section -->
         <div class="section" id="workshop">
+            <div class="Title">Workshops</div>
             <div class="details">
-                <div class="Title">Workshops</div>
-                <img src="img/workshops-big.png" class="background-image-right"/></img>
                 <p>
                     Customized workshops are focused on your organization’s specific learning and development needs.  Each session has a blend of lecture on research-based insights, interactive and group activities, and case-based learning.
                     Topics and modules include:
@@ -187,13 +177,13 @@
                     </td>
                 </table>
             </div>
+            <img src="img/workshops-big.png" class="background-image-right"/></img>
         </div>
 
         <!-- About Section -->
         <div class="section" id="about">
+            <div class="Title">About</div>
             <div class="details">
-                <div class="Title">About</div>
-                <img src="img/about-big.png" class="background-image-right"/></img>
                 <p>
                     GoBrighter is led by Jennifer (Jenny) Stine, Ph.D. and is supported by a network of outstanding colleagues. Stine is an expert in the development of world-class executive and professional programs, with over a decade of leadership experience at Harvard and MIT.  Since 2012, Stine has been an independent consultant, working both for top universities and Fortune Global 500 companies.  In addition to coaching and consulting, she is an instructor at Harvard Extension School and Harvard Division of Continuing Education where she teaches organizational behavior, leadership, and teamwork. Stine holds three degrees from Stanford University, including a Ph.D. in history.  She is a Gallup-Certified Strengths Coach, and a certified Denison consultant.</p>
                 <p>
@@ -203,6 +193,7 @@
                     For more information on any of the services described here, please email: <a href="mailto:jenniferkstine@gmail.com">jenniferkstine@gmail.com</a>.
                 </p>
             </div>
+            <img src="img/about-big.png" class="background-image-right"/></img>
         </div>
 
     </div>
