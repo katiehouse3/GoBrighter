@@ -1,3 +1,8 @@
+function isMobile() {
+return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+if (!isMobile()) {
      var container, stats;
       var camera, scene, renderer, particle;
       var mouseX = 0, mouseY = 0;
@@ -116,3 +121,7 @@
         camera.lookAt( scene.position );
         renderer.render( scene, camera );
       }
+
+      
+
+}

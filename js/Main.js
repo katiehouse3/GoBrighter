@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    if($('head').width() > 900) { $('body').append('<script src="js/particles.js"><\/script>'); }
+
   $('#fullpage').fullpage({
     //Navigation
     menu: '#menu',
