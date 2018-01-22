@@ -16,6 +16,10 @@ nav{
   position:relative;
 }
 
+h1{
+  font-family: Raleway;
+}
+
 table {
   font-family: 'Open Sans';
   padding-top: 20px;
@@ -263,7 +267,7 @@ button, input[type="submit"], input[type="reset"] {
     overflow:auto;
     height:auto;
   }
-
+  
   #menu ul, nav:active ul { 
     position: absolute;
     padding: 20px;
@@ -299,6 +303,7 @@ button, input[type="submit"], input[type="reset"] {
     background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* ie10+ */
     background:radial-gradient(ellipse at center, rgba(255,255,255,1) 40%, rgba(250,250,250,1) 68%, rgba(249,249,249,1) 69%, rgba(247,247,247,1) 83%, rgba(245,245,245,1) 100%); /* w3c */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFF', endColorstr='#F5F5F5',GradientType=1 ); /* ie6-9 */
+    height:100%;
   }
 
   .details{
