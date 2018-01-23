@@ -59,7 +59,7 @@ $(document).ready(function() {
 
             if (screen.width > 500) {
                 $('.menu-image').fadeIn();
-                $('#menu').css({top:600}); 
+                $('#menu').css({top:'60%'}); 
             }
             else{
                 $('#menu').css({top:70});
