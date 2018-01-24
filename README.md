@@ -1,4 +1,4 @@
-## GoBrighter
+![Go Brighter Logo](http://www.gobrighter.net/img/logo2.png)
 
 ### Purpose:
 A professional website for Jennifer Stine's private consulting. This site is published at: https://katiehouse3.github.io/GoBrighter/
