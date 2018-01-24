@@ -1,4 +1,4 @@
-![Go Brighter Logo](http://www.gobrighter.net/img/logo2.png)
+<img src="http://www.gobrighter.net/img/logo2.png" alt="logo" height="200"/>
 
 ### Purpose:
 A professional website for Jennifer Stine's private consulting. This site is published at: https://katiehouse3.github.io/GoBrighter/
