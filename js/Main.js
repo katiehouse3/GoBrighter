@@ -52,6 +52,7 @@ $(document).ready(function() {
     },
     afterLoad: function(anchorLink, index){
         var loadedSection = $(this);
+        var menu = $('#menu');
 
         // show images and move navbar
         if(index == 1){
@@ -59,21 +60,20 @@ $(document).ready(function() {
 
             if (screen.width > 500) {
                 $('.menu-image').fadeIn();
-                $('#menu').css({top:'60%'}); 
+                $(menu).fadeIn(800);
+                $(menu).css({top:'60%'}); 
             }
             else{
-                $('#menu').css({top:70});
+                $(menu).css({top:70});
             }
-
-            $('#menu').fadeIn(800);
         }
 
         // hide images and navbar on top
         if(index != 1){
             $('#menu-home').show();
             $('.menu-image').hide();
-            $('#menu').css({top:0});
-            $('#menu').fadeIn(800);
+            $(menu).css({top:0});
+            $(menu).fadeIn(800);
         }
     },
     afterRender: function(){ },
