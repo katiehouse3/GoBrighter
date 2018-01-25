@@ -23,7 +23,7 @@ $(document).ready(function() {
     anchors:['home1','coaching2', 'teambuilding3', 'survey4', 'workshop5','about6'], //section anchors
     navigation: true,
     navigationPosition: 'right',
-    navigationTooltips: ['home','coaching', 'teambuilding', 'survey', 'workshop','about'],
+    navigationTooltips: ['Home','Coaching', 'Team Building', 'Culture Surveys', 'Workshops','About'],
     showActiveTooltip: true,
     slidesNavigation: false,
     slidesNavPosition: 'bottom',
