@@ -10,7 +10,7 @@ $(document).ready(function() {
         flag = true;
         setTimeout(function(){ flag = false; }, 100);
         $(nav).toggleClass("change ''");
-        $(menu).toggleClass("hidden-phone ''");
+        $(menu).toggleClass("d-none d-lg-block ''");
       }
       return false
     });
