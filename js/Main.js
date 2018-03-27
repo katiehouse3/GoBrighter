@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 
     //Hide and show navigation on nav-button click or touch
