@@ -221,6 +221,11 @@ button, input[type="submit"], input[type="reset"] {
   left: 0;
 }
 
+.coaching-img{
+  position: relative;
+    left: 50%;
+    transform: translate(-50%, );
+}
 .link{
   text-align: center;
   font-size: 20px;
